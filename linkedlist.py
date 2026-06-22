@@ -21,6 +21,13 @@ class LinkedList:
             return
         obj.next = self.head
         self.head = obj
+    def middle(self):
+        slow=self.head
+        fast=self.head
+        while fast and fast.next:
+            slow=slow.next
+            fast=fast.next.next
+        print(slow.data)
     def display(self):
         itr=self.head
         while itr:
@@ -36,3 +43,5 @@ ll.add_end(550)
 ll.add_end(650)
 ll.add_begin(750)
 ll.display()
+print()
+ll.middle() 
